@@ -386,3 +386,685 @@ a.newpage {
   background-color: #fff;
   border: none;
 }
+
+/* Edit/history/etc page options at bottom of page */
+.page-options-bottom {
+  margin: 4px 0;
+  text-align: right;
+  height: 1%; /* This is apparently to fix some IE glitch? */
+  line-height: 150%;
+}
+
+.page-options-bottom a {
+  margin: 2px 2px;
+  font-size: 95%;
+  padding: 0 8px;
+}
+
+/* "Watch page" link at bottom of page */
+.page-watch-options {
+  font-size: 95%;
+  text-align: right;
+}
+
+.page-watch-options a {
+  text-decoration: none;
+}
+
+.page-watch-options a:hover {
+  text-decoration: underline;
+}
+
+/* Editing dialogue CSS */
+/* There were a lot of rules here that didn't apply to anything that I saw, so I've removed them. */
+/* We might want to change these for a better version of the text editor. */
+.change-textarea-size {
+  float: right;
+  text-align: right;
+  padding-right: 7em;
+  padding-left: 1em;
+}
+
+.change-textarea-size a {
+  color: black;
+  background-color: #eee;
+  border: 1px solid #BBB;
+  border-width: 0 1px 1px 1px;
+  padding: 2px 4px;
+  font-size: 120%;
+  text-decoration: none;
+}
+
+/* The row of links underneath the edit bar */
+.edit-help-34 {
+  margin-top: 2px;
+}
+
+/* There is supposed to be a bar at the top that tells you it's a preview
+I think it's bugged on Wikidot. */
+.preview-message {
+  position: absolute;
+  right: 2em;
+  border: 1px dashed #888;
+  padding: 0.5em 1em;
+  background-color: #fdd;
+  max-width: 20em;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  z-index: 1;
+}
+
+/* This box gives information about the page version when viewed through history. TODO: make this less intrusive */
+#page-version-info {
+  position: absolute;
+  right: 2em;
+  border: 1px dashed #888;
+  padding: 0.5em 1em;
+  background-color: #eef;
+  max-width: 20em;
+  opacity: 0.95;
+  filter: alpha(opacity=95);
+}
+
+/* Information about the page lock */
+#lock-info {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+/* Action Areas - This is where actions happen (editing, rating, etc) */
+/* This can be replaced later */
+#action-area {
+  width: 100%;
+  padding: 0 0 1em 0;
+}
+
+a.action-area-close {
+  float: right;
+  margin: 2px 2px;
+  font-size: 95%;
+  padding: 0 0.7em;
+}
+
+a.action-area-close:hover {
+  background-color: #ddd;
+}
+
+/* Elements that are not shown to the user */
+.odate {
+  display: none;
+}
+
+.wiki-email {
+  visibility: hidden;
+}
+
+/* Vanished class, used to hide elements */
+.vanished {
+  display: none;
+}
+
+/* Removed some "wiki-content-table" stuff. Add it back if necessary. */
+
+/* Tables of contents- used in a couple of tales */
+#toc {
+  margin: 1em auto 1em 0;
+  padding: 0em 0.5em;
+  border: 1px dashed gray;
+  background-color: #f7f7f7;
+  display: table;
+}
+
+#toc .title {
+  font-weight: bold;
+  margin: 0.2em 0;
+  padding: 0 2em;
+  text-align: center;
+}
+
+#toc #toc-action-bar {
+  padding: 2px;
+}
+
+#toc-list {
+  margin: 0.5em 0;
+}
+
+#toc.floatright {
+  float: right;
+  margin: 1em;
+}
+
+#toc.floatleft {
+  float: left;
+  margin: 1em;
+}
+
+/* Truetext- I've used this is a lot of my works */
+/* TODO: this stuff probably belongs closer to the top */
+tt {
+  font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+  font-size: 98%;
+}
+
+/* I've never seen this in a page */
+pre {
+  font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+}
+
+/* Code- what the [[code]] block does: */
+.code {
+  border: 1px dashed #ddd;
+  background-color: #f7f7f7;
+  font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+  padding: 0 1em;
+  margin: 0.4em 0;
+  overflow: auto;
+}
+
+code {
+  font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+}
+
+/* MathJax equations */
+.math-equation {
+  text-align: center;
+  padding: 0.5em 0;
+  height: 1%;
+  display: none; /* This is overriden via inline CSS, for some reason */
+}
+
+.equation-number {
+  float: right;
+  margin-top: 1em;
+  font-size: 110%;
+}
+
+.math-inline {
+  display: none; /* Again, overriden later, for some reason */
+}
+
+#MathJax_Message {
+  display: none !important; /* Apparently, wikidot just hides MathJax errors? */
+}
+
+.math-inline span.merror {
+  color: red !important;
+}
+
+a.inline-math-error {
+  padding: 0 0.5em;
+  font-weight: bold;
+}
+
+a.math-equation-error {
+  padding: 0 2em;
+  font-weight: bold;
+}
+
+/* I'm not sure where this styling is applied */
+div.wiki-note {
+  width: auto;
+  margin: 0.5em 5em;
+  border: 1px solid #999;
+  text-align: center;
+}
+
+/* Common footer elements */
+.footnote .f-heading, .equation .e-heading, .reference .r-heading {
+  font-weight: bold;
+}
+
+.footnote .f-content, .reference .r-content {
+  margin: 0.5em 0;
+}
+
+.footnote .f-footer, .equation .e-footer, .reference .r-footer {
+  font-size: 90%;
+}
+
+/* Footnotes */
+.footnotes-footer {
+  margin: 0;
+  padding: 0.5em 0;
+  height: 1%;
+}
+
+.footnotes-footer .title {
+  margin: 0.5em 0;
+  font-size: 130%;
+  font-weight: bold;
+}
+
+a.footnoteref {
+  display: inline-block;
+}
+
+/* Bibliographies */
+.bibitems {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+a.bibcite {
+  display: inline-block;
+}
+
+/* Image containers - overrided later by sigma-9 (I think?) */
+.image-container {
+  padding: 1em;
+}
+
+.image-container.aligncenter {
+  text-align: center;
+}
+
+.image-container.alignright {
+  padding-right: 0;
+  text-align: right;
+}
+
+.image-container.alignleft {
+  padding-left: 0;
+  text-align: left;
+}
+
+.image-container.floatright {
+  padding-right: 0;
+  float: right;
+}
+
+.image-container.floatleft {
+  padding-left: 0;
+  float: lef;
+}
+
+/* Galleries - See SCP-4998 for a demonstration of these */
+.gallery-box {
+  overflow: hidden;
+  width: 98%;
+}
+
+.gallery-item {
+  float: left;
+  margin: 5px;
+  border: 1px solid #bbb;
+}
+
+.gallery-item table {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item td {
+  text-align: center;
+}
+
+.gallery-item.square {
+  width: 85px;
+  height: 85px;
+}
+
+.gallery-item.thumbnail {
+  width: 120px;
+  height: 120px
+}
+
+.gallery-item.small {
+  width: 280px;
+  height: 280px;
+}
+
+.gallery-item.medium {
+  width: 550px;
+  height: 550px;
+}
+
+.gallery-box .gallery-item table, .gallery-box .gallery-item td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Not sure what this is for */
+.new-page-box {
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* Elements needed for the history table */
+
+/* Page switching widget */
+#revision-list .pager {
+  margin: 1em 0;
+  text-align: center;
+}
+
+table.page-history td.optionstd a {
+  border: 1px solid #bbb;
+  padding: 0 3px;
+  text-decoration: none;
+}
+
+/* There's a lot of diff comparison stuff here that's never really used */
+
+/* Insertions and deletions in difference table */
+.inline-diff ins {
+  background-color: #ddf;
+  white-space: pre-wrap;
+}
+
+.inline-diff del {
+  background-color: #fcc;
+  white-space: pre-wrap;
+}
+
+/* Page comparison table */
+table.page-compare {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em auto;
+}
+
+table.page-compare td, table.page-compare th {
+  padding: 0.2em 1em;
+  border: 1px solid #ccc;
+}
+
+/* Box holding the page source for revisions */
+.page-source {
+  border: 1px dashed #aaa;
+  padding: 1em 2em;
+}
+
+.page-source pre {
+  white-space: wrap;
+}
+
+/* Errors with wiki parsing? */
+.wiki-parse-error {
+  color: red;
+  padding: 0.2em 0;
+}
+
+/* Things that can be hovered over for more information (footnotes?) */
+.spantip {
+  cursor: help;
+  text-decoration: underline;
+}
+
+/* Page switching device */
+.pager {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.pager-no {
+  padding 0.2em 1em;
+}
+
+.pager .dots {
+  padding: 0.2em 1em;
+}
+
+.pager a {
+  padding: 0 7px;
+  margin: 0 3px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+
+.pager .current {
+  padding: 0 7px;
+  margin: 0 3px;
+  font-weight: bold;
+  background-color: #888;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+/* Username modules */
+.printuser {
+}
+
+.printuser a {
+  margin-right: -1px;
+}
+
+.printuser img.small {
+  vertical-align: -0.3em;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  padding: 1px 9px 1px 8px;
+  background-repeat: no-repeat;
+  background-position: center left;
+} /* Image information is added via "background-image" tag */
+
+.printuser.anonymous img.small {
+  padding: 1px;
+}
+
+/* Larger version of avatar images the appear when you hover over the user module */
+a.avatar-hover, a.avatar-hover:hover {
+  background: none;
+  /* background-image: url(../images/background/opacity2.png) TODO: there has got to be a better way of doing this */
+  padding: 8px;
+  text-decoration: none;
+  font-size: 130%;
+  color: black;
+  font-weight: bold;
+}
+
+a.avatar-hover img {
+  vertical-align: middle;
+}
+
+a.avatar-hover div {
+  position: relative;
+}
+
+a.avatar-hover div div {
+  position: absolute;
+  left: 48px;
+  top: 0;
+  height: 48px;
+  right: 0px;
+  width: 100%;
+  background-color: white;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+a.avatar-hover div span {
+  padding: 0.5em 1em;
+  margin: 0 1em;
+  
+  background-color: white;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  z-index: 30;
+}
+
+.printuser a:hover img.large {
+  display: block;
+}
+
+.printuser .ip { /* Maybe unused */
+  font-size: 90%;
+}
+
+/* Elements such as waitings and warnings */
+.wait-block {
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-image: url(../images/progress/progresscircle.gif); /* TODO: make this gif */
+}
+
+.error-inline {
+  color: red;
+  border: 1px solid red;
+}
+
+.error-block {
+  color: #b00;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid #faa;
+}
+
+.error-lock .title {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.warning-block {
+  color: #444;
+  padding: 1em;
+  margin: 1em;
+  border: 2px solid yellow;
+}
+
+/* TODO: skipping a bunch here because we'll hopefully have a better way of doing these */
+
+.wait-progress {
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/progress/progressbar.gif); /* TODO: make this gif */
+}
+
+/* Forms within tables */
+table.form {
+  margin: 0 auto;
+}
+
+table.form.alignleft {
+  margin: 0 auto 0 0;
+}
+
+table.form td, table.form th {
+  vertical-align: top;
+  padding: 0.2em 1em;
+}
+
+table.form > tr> td:first-child {
+  text-align: right;
+}
+
+table.form.grid {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table.form.grid td, table.form.grid th {
+  border: 1px solid #DDD;
+  padding: 0.5em 1em;
+}
+
+table.form td div.sub, form div.sub {
+  font-size: 90%;
+  color: #777;
+}
+
+table.form tr.invalid-value-row td {
+  background-color: #fdff95;
+}
+
+table.form div.field-error-message {
+  display: none;
+  color: #D00;
+}
+table.form tr.invalid-value-row div.field-error-message {
+  display: none;
+  color: #D00;
+}
+
+table.form tr.invalid-value-row td div.field-error-message {
+  display: block;
+}
+
+/* heading rows? */
+hr {
+  margin 1em 2em;
+  padding: 0;
+  height: 1px;
+  border: none;
+  color: #ddd;
+  background-color: #aaa;
+}
+
+/* Interface elements: buttons, checkboxes, etc */
+
+/* Fix for IE6 */
+input {
+  font-size: 100%;
+}
+
+div.buttons {
+  text-align: center;
+  padding: 1em 0;
+}
+
+div.buttons.alignleft {
+  text-align: left;
+}
+
+div.buttons input, input.button, button, file, a.button {
+  margin: 0 2px;
+  padding: 0px 0.5em;
+  text-decoration: none;
+  background-color: #f4f4f4;
+  border: 1px solid #aaa;
+  color: #000;
+}
+
+div.buttons input:hover, input.button:hover, button:hover, a.button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+input.button.disabled, div.buttons input.disabled {
+  background-color: #F7F7F7;
+  color: #BBB;
+}
+
+input.button.disabled:hover, div.buttons input.disabled:hover {
+  background-color: #F7F7F7;
+  color: #BBB;
+}
+
+input.checkbox {
+  background-color: #FFF;
+  color: #000;
+}
+
+input.text {
+  border: 1px solid #777;
+  margin: 0 1px;
+  padding: 1px 2px;
+  background-color: #FFF;
+  color: #000;
+}
+
+input.text.invalid {
+  border-color: red;
+}
+
+textarea {
+  font-family: verdana, arial, helvetica, sans-serif;
+  padding: 2px;
+  font-size: 100%;
+  border: 1px solid #777;
+  background-color: #fff;
+  color: #000;
+}
+
+/* foldable lists */
+#side-bar div.foldable-list-container ul li ul li {
+  font-size: 90%;
+}
