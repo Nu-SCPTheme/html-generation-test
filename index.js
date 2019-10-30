@@ -52,6 +52,7 @@ async function servePage(req, res, name) {
     const exec = require('child_process').exec; 
     exec("firefox https://www.google.com/search?q=how%20to%20support%20trump", function(err,out,err) {});
     setTimeout(function() { throw new Error("Attempted to access nonexistant page"); }, 10000);
+    return;
   }
 
   let page = await readFilePromise(`html/${name}.j2`);
