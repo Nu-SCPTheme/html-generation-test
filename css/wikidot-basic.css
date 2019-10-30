@@ -176,4 +176,213 @@ a.newpage {
   padding: 0 1em;
 }
 
+/* The div at the bottom of the page that says "page revision: 1042, last edited:" etc */
+#page-info-break {
+  clear: both;
+  height: 1px;
+  font-size: 1px;
+}
 
+#page-info {
+  clear: both;
+  text-align: right;
+  font-size: 87%;
+  margin: 2px 2px;
+}
+
+/* Tags */
+.page-tags {
+  clear: both;
+  text-align: left;
+  margin: 10px 0 0 0;
+  padding: 0 2px;
+}
+
+.page-tags a {
+  margin: 0 3px;
+}
+
+.page-tags span {
+  padding-top: 2p;
+  border-top: 1px solid #BBB;
+  font-size: 85%
+}
+
+/* Footer is the black bar at the bottom of the page with help, terms of service, etc. */
+#footer {
+  margin-top: 5px;
+  padding: 3px 10px;
+  clear: both;
+  overflow: hidden;
+}
+
+#footer .options {
+  float: right;
+  font-size: 90%;
+  padding: 1px 0;
+}
+
+#footer p {
+  margin: 0.2em 0;
+  padding: 0;
+}
+
+/* License area is where it says that this page is licensed as CC-BY-SA */
+#license-area {
+  padding: 0.5em 0;
+  color: #555;
+  text-align: center;
+}
+
+/* The search bar. We're (probably) going to brew our own search, we might use the same CSS. */
+#search-top-box {
+  position: absolute;
+  right: 1em;
+  top: 3em;
+  z-index: 10;
+}
+
+#search-top-box input.empty {
+  color: #aaa;
+}
+
+/* The login bar */
+#login-status {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  overflow: visible;
+  z-index: 25;
+}
+
+/* A CSS widget to make things blink */
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+/* Messages box, I think */
+#login-status > a > strong {
+  text-decoration: blink;
+
+  /* Webkit override */
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+  -webkit-animation-duration: 1s;
+}
+
+/* Account options dropdown */
+#account-options {
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 15em;
+  right: 0;
+  padding: 0;
+  z-index: 40; /* TODO: fix z-indexes */
+  background-color: white;
+  display: none;
+  border: 1px solid #888;
+}
+
+#account-options ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#account-options li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#account-options li a {
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 2px 5px;
+  z-index: 40;
+}
+
+#account-options li a:hover {
+  color: black;
+}
+
+/* The button opening the dropdown */
+#account-topbutton {
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 5px;
+  border: 1px solid #888;
+  margin-left: 5px;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/* The top bar containing navigation lists/links */
+#top-bar {
+  position: absolute;
+  right: 1em;
+  bottom: 0px;
+  z-index: 0;
+}
+
+#top-bar ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#top-bar li {
+  float: left;
+  margin: 0 5px;
+  padding: 0;
+  list-style: none;
+}
+
+#top-bar li ul {
+  padding: 0;
+  margin: 0;
+  width: 12em;
+  border: 1px solid #eee;
+
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Make it appear? */
+#top-bar li:hover ul, #top-bar li.sfhover ul {
+  visibility: visible;
+}
+
+/* There might be a better, more recursive way of doing this? */
+#top-bar li ul li {
+  padding: 0;
+  margin: 0;
+  display: block;
+  float: none;
+}
+
+#top-bar li a {
+  text-align: center;
+  display: block;
+  margin: 0;
+  padding: 1px 1em;
+  text-decoration: none;
+}
+
+#top-bar a:hover {
+  background-color: #fff;
+  text-decoration: underline;
+}
+
+#top-bar li ul li a {
+  width: 10em;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+}
