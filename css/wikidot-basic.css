@@ -1,0 +1,179 @@
+/*
+  This is an emulation of Wikidot's CSS as best as I can do it.
+  I'm not the best CSSer so there's obviously going to be holes.
+  We might want someone else to look at this later.
+
+  - not_a_seagull
+
+  This theme may be used under the Creative Commons Attribution-ShareAlike 3.0 license.
+*/
+
+/* compatibility for older browsers, I think? */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* general font settings */
+body {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 0.82em;
+}
+
+/* default settings for headers - these are overrided later (I think?) but is kept for compatibility purposes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet MS", Trebuchet, Verdana, Arial, Helvetica;
+}
+
+h1 {
+  font-size: 190%;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 150%;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+/* I think this is overriding the default way HTML handles images? I think this could be removed */
+img {
+  border-width: 0px;
+}
+
+/* Blockquotes: big, gray boxes for containing dialogue. We could make this a div? */
+blockquote{
+  border: 1px dashed #999;
+  padding: 0 1em;
+  background-color: #f4f4f4;
+}
+
+/* Tables - Probably unnecessary? */
+table {
+  empty-cells: show;
+}
+
+td {
+  text-align: left;
+}
+
+/* Default blue link color
+   This is overrided by literally every theme on the site, because blue is ugly.
+   Probably can be removed. */
+a {
+  color: #00a;
+  text-decoration: none;
+}
+
+/* In default wikidot, links become this weird color: #EEE
+   I think this is a bad idea. Links now get underlined on hover. */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Waiting cursor, for when hovering over elements tagged with "wait" */
+.wait {
+  cursor: wait;
+}
+
+form {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* I think this gets overridden later on. I don't think I've ever seen this come into effect. */
+a.newpage {
+  color: #933;
+}
+
+/* This wraps the wrapper for the container for the main content */
+#container-wrap-wrap {
+  position: relative;
+}
+
+/* This contains the main content */
+#container {
+  margin: 0;
+  padding: 0;
+}
+
+/* The header at the top of most pages */
+#header {
+  position: relative;
+  z-index: 30; /* TODO: fix z-indices */
+  height: 7em;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#header h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Wraps the main page content */
+#content-wrap {
+  margin: 0;
+  padding: 0;
+
+  /* This is apparently a fix for IE6 */
+  _height: 1%;
+  min-height: 1px;
+}
+
+/* Sidebar to the side of the page */
+#side-bar {
+  float: left;
+  width: 14em;
+  padding: 1em;
+  margin: 0 0 1em 0;
+  clear: left;
+}
+
+#side-bar ul {
+  padding: 0 0 0 2em;
+  margin: 0.5em 0;
+}
+
+/* Page title (the big text with "SCP-XXXX") */
+#page-title {
+  margin: 0 0 0.5em 0;
+  padding-top: 0.5em;
+  font-size: 200%;
+  border-bottom: 1px solid #666;
+}
+
+/* Breadcrumbs navigation */
+#breadcrumbs {
+  margin-top: -0.5em;
+}
+
+/* This div contains the primary content of the page */
+#main-content {
+  margin-left: 17em;
+  padding: 0 1em;
+}
+
+
