@@ -1,0 +1,23 @@
+{
+  "name": "mekhane-html-generation",
+  "version": "1.0.0",
+  "description": "Temporary repo for testing out HTML constructs for Project Mekhane (e.g. tabs, collapsibles)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nu-SCPTheme/mekhane-html-generation.git"
+  },
+  "author": "not_a_seagull",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Nu-SCPTheme/mekhane-html-generation/issues"
+  },
+  "homepage": "https://github.com/Nu-SCPTheme/mekhane-html-generation#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.0"
+  }
+}
