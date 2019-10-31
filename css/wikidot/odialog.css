@@ -1,0 +1,158 @@
+/*
+This theme may be used under the Creative Commons Attribution-ShareAlike 3.0 license.
+*/
+
+/* Used for intrusive dialogues/models, or as Wikidot calls them, "odialogs" */
+.odialog-shader, .odialog-shader-iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+}
+
+.odialog-shader {
+  background-color: #222;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+.odialog-shader-iframe {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+table#odialog-box-container {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  left: 0;
+}
+
+table#odialog-box-container td {
+  width: 100%; height: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table#odialog-box-container td div {
+  margin: 0 auto;
+}
+
+#odialog-wrapper {
+  text-align: center;
+}
+
+#odialog-container {
+  position: absolute;
+  top:0;
+  height: 100%;
+  z-index: 50;
+  width: 100%;
+}
+
+
+.owindow {
+  background-color: white;
+  width: 50em;
+  border: 2px solid #BBB;
+  text-align: left;
+  position: absolute;
+}
+
+.owindow .close {
+  float: right;
+  padding: 0.2em 0.4em;
+  font-size: 85%;
+  cursor: pointer; cursor: hand;
+}
+
+.owindow .title {
+  cursor: move;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 0.2em 1em;
+  background-color: #F5F5F5;
+  height: 1%;
+}
+
+.owindow .content {
+  padding: 0.5em 1em;
+}
+
+.owindow .button-bar {
+  text-align: right;
+  padding: 0.2em 1em;
+  margin: 0.5em;
+}
+
+.owindow .button-bar input {
+  padding: 0 0.5em;
+}
+
+.owindow .button-bar a {
+  margin: 0.2em 0.2em;
+  padding: 0.1em 1em;
+  text-decoration: none;
+  background-color: #F4F4F4;
+  border: 1px solid #AAA;
+}
+
+.owindow .button-bar a:hover {
+  background-color: #DDD;
+}
+
+/* Different types of dialogues */
+.owindow.owait {
+  width: auto;
+}
+
+.owindow.owait .content {
+  margin: 10px;
+  padding: 0 50px 20px 50px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url(../images/progress/progressbar.gif); /* TODO: make this gif */
+}
+
+.owindow.osuccess {
+  width: auto;
+}
+
+.owindow.osuccess .content {
+  margin: 10px;
+  padding: 0 50px;
+}
+
+/* I'm not sure what this "box444" is for... Maybe a mispelled "404"? */
+.box444 {
+  background-color: white;
+  width: 40%;
+  top: 10px; left: 10px;
+}
+
+.box444 .button-bar {
+  background-color: #DDD;
+  text-align: right;
+  padding: 0.3em 1em;
+}
+
+/* "Tips" that appear when a particular thing is hovered over */
+.hovertip {
+  display: none; 
+  width: 20em; 
+  border: 2px solid #888;
+  background-color: #F3F3F3;
+  z-index: 100;
+}
+
+.hovertip .title {
+  font-weight: bold;
+  padding: 0.2em 0.5em;
+  font-size: 110%;
+}
+
+.hovertip .content {
+  padding: 0.2em 0.5em;
+}
