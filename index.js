@@ -44,6 +44,9 @@ nunjucks.configure({ autoescape: false });
 
 const app = express();
 
+let sidebar = fs.readFileSync("html/sidebar.j2").toString();
+let topbar = fs.readFileSync("html/topbar.j2").toString();
+
 async function servePage(req, res, name) {
   if (!(await existsPromise(`html/${name}.j2`))) {
     // This is not meant to be a prod script. Therefore, this is meant to be as unusable as possible.
@@ -62,12 +65,28 @@ async function servePage(req, res, name) {
   template = template.toString();
 
   return nunjucks.renderString(template, {
-    ul_vanishing: "",
-    login_bar: "",
-    page_rating: 11,
-    ftml_content: page
+    site_name: "SCP Foundation",
+    site_subtext: "Secure, Contain, Protect",
+    top_bar: topbar,
+    side_bar: sidebar,
+    page_tags: "",
+    page_info: "Revision 01",
+    page_wach_options: "Watch this page",
+    licensing_info: "CC-BY-SA 3.0",
+  
+    content: page
   });
 }
+
+app.use("/sys/css/sigma-9/:name", async function(req, res) {
+  res.type("text/css");
+  res.send((await readFilePromise(`css/sigma-9/${req.params.name}`)).toString());
+});
+
+app.use("/sys/css/wikidot/:name", async function(req, res) {
+  res.type("text/css");
+  res.send((await readFilePromise(`css/wikidot/${req.params.name}`)).toString());
+});
 
 app.use("/sys/:name", async function(req, res) {
   res.send(await servePage(req, res, req.params.name));
