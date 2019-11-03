@@ -601,7 +601,7 @@ div.sexy-box div.image-container img {
   margin-right: 2em;
 }
 
-.page-rate-widget-box .rate-points {
+.page-rate-widget-box .rating {
   background-color: #633 !important;
   border: solid 1px #633;
   border-right: 0;
@@ -1459,4 +1459,15 @@ iframe.scpnet-interwiki-frame {
   div.scpnet-interwiki-wrapper {
     width: 18em;
   }
+}
+
+/* Modification to make rating modules bolder */
+.page-rate-widget-box .rating {
+  color: #FFF;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.page-rate-widget-box .cancel {
+  padding: 0 5px;
 }
