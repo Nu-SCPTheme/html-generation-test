@@ -88,6 +88,11 @@ app.use("/sys/css/wikidot/:name", async function(req, res) {
   res.send((await readFilePromise(`css/wikidot/${req.params.name}`)).toString());
 });
 
+app.use("/sys/css/:name", async function(req, res) {
+  res.type("text/css");
+  res.send((await readFilePromise(`css/${req.params.name}`)).toString());
+});
+
 app.use("/sys/bundle.js", async function(req, res) {
   res.type("text/javascript");
   res.send((await readFilePromise("bundle.js")).toString());

@@ -1,0 +1,62 @@
+/*
+This theme may be used under the Creative Commons Attribution-ShareAlike 3.0 license.
+*/
+
+/* Tabview CSS */
+
+.tabview {
+  position: relative;
+}
+
+.tabview .tab-selectors {
+  border: solid;
+  border-color: #444;
+  border-width: 0 0 5px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  width: auto;
+  position: static;
+}
+
+.tabview .tab-selectors li {
+  margin: 0 0.16em 0 0;
+  padding: 1px 0 0;
+
+  display: inline-block;
+
+  vertical-align: bottom;
+  cursor: pointer;
+  line-height: normal;
+  list-style: none;
+}
+
+.tabview .tab-selectors li a {
+  display: inline-block;
+  vertical-align: bottom;
+
+  border: solid #a3a3a3;
+  border-width: 0 1px;
+  color: #000;
+  position: relative;
+  text-decoration: none;
+}
+
+.tabview .tab-selectors .active {
+  margin: 0 0.16em -1px 0;
+}
+
+.tabview .tab-selectors .active a {
+  background-color: #700;
+  border-color: #243356;
+  color: #fff;
+}
+
+.tabview .tab-container {
+  background-color: #f5f5f5;
+  border: 1px solid #808080;
+  border-top-color: #243356;
+  padding: 0.25em 0.5em;
+}
