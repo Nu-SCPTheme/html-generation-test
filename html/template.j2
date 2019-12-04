@@ -56,10 +56,18 @@
                 </div>
                 <div id="utilities-links-1" class="page-options-bottom">
                   <!-- TODO: links to utilitites -->
+                  <a id="utility-edit-link">Edit</a>
                   <a id="utility-rating-link">Rate ({{ rating }})</a>
+                  <a id="utility-tags-link">Tags</a>
+                  <a id="utility-discuss-link">Discuss</a>
+                  <a id="utility-history-link">History</a>
+                  <a id="utility-files-link">Files</a>
+                  <a id="utility-more-link">+ Options</a>
                 </div>
                 <div id="utilities-links-2" class="page-options-bottom">
-
+                  <a id="utility-pagesrc-link">Page Source</a>
+                  <a id="utility-parent-link">Parent</a>
+                  <a id="utility-rename-link">Rename</a>
                 </div>
               </div>
               <div id="utility-block">
@@ -94,6 +102,10 @@
                             </textarea>
                           </div>
                         </td>
+                        <td>
+                          <blockquote id="edit-editlock-notification">
+                          </blockquote>
+                        </td>
                       </tr>
                     </table>
                     <div id="edit-buttons">
@@ -103,6 +115,34 @@
                     </div>
                   </form>
                 </div>
+                <div id="utility-tags-block" class="vanished">
+                  <form id="tag-page-form">
+                    <div style="text-align: center;">
+                      <h1>Edit page</h1>
+                      <p><input id="tags-box" name="tags-box" style="width: 80%;" /></p>
+                      <table>
+                        <tr>
+                          <td>
+                            <input type="button" id="tags-submit-button" value="Submit" />
+                          </td>
+                          <td>
+                            <input type="button" id="tags-clear-button" value="Clear Tags" />
+                          </td>
+                          <td>
+                            <input type="button" id="tags-cancel-button" value="Cancel" />
+                          </td>
+                        </tr> 
+                      </table>
+                    </div>                   
+                  </form>
+                </div>
+                <div id="utility-history-block" class="vanished">
+                </div>
+                <div id="utility-pagesrc-block" class="vanished">
+                  <h1>Page Source</h1>
+                  <div class="page-source">
+                  </div>
+                </div> 
               </div>
             </div>
           </div>
