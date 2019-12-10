@@ -1,0 +1,8 @@
+input {
+  border-color: black;
+}
+
+#error-message {
+  text-color: red;
+  text-align: center;
+}
