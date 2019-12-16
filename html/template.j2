@@ -28,7 +28,26 @@
             </div>
 
             <div id="login-status">
-              {{ login_status }}
+              {% if my_user_module is defined %}
+                {{ my_user_module }}
+                <a href="/user/myaccount">My Account</a>
+                <a href="/user/myaccount/messages">
+                  <strong>{{ message_count }}</strong>
+                </a>
+                <a id="account-topbutton">▼</a>
+                <div id="account-options">
+                  <ul>
+                    <li><a href="/user/myaccount/activity">Activity</a></li>
+                    <li><a href="/user/myaccount/messages">Messages</a></li>
+                    <li><a href="/user/myaccount/settings">Settings</a></li>
+                    <li><a href="/user/myaccount/sites">Sites</a></li>
+                    <li><a href="/user/myaccount/activity">Activity</a></li>
+                    <li><a id="logout-button">Logout</a></li>
+                  </ul>
+                </div>
+              {% else %}
+                <p><a href="/login/register">Create Account</a> or <a href="/login/login">Login</a></p>
+              {% endif %}
             </div>
           </div>
 
@@ -43,7 +62,9 @@
               </div>
               <div class="page-tags">
                 <span>
-                  {{ page_tags }}
+                  {% for tag in tags %}
+                    <a href="/sys/tagcloud/{{ tag }}">{{ tag }}</a>
+                  {% endfor %}
                 </span>
               </div>
               <div id="page-info-break"></div>
