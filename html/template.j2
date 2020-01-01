@@ -16,11 +16,16 @@
       // automatically include needed user information
       window.storedUserInfo = [
         {% for user in stored_user_info %}
-          \\{
-              userid: {{ user.userid }},
-              username: "{{ user.username }}",
-              "profile-picture-url": {{ user["profile-picture-url"] | "null" }}
-          \\},
+          {
+            userid: {{ user.userid }},
+            username: {{ "\"" + user.username + "\"" }},
+            "profile-picture-url":
+              {% if user["profile-picture-url"] is defined %}
+                {{ "\"" + user["profile-picture-url"] + "\"" }}
+              {% else %}
+                null
+              {% endif %}
+          },
         {% endfor %}
       ];
     </script>
