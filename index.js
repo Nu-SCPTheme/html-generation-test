@@ -98,6 +98,11 @@ app.use("/sys/bundle.js", async function(req, res) {
   res.send((await readFilePromise("bundle.js")).toString());
 });
 
+app.use("/sys/bundle.js.map", async function(req, res) {
+  res.type("text/javascript");
+  res.send((await readFilePromise("bundle.js.map")).toString());
+});
+
 app.use("/sys/:name", async function(req, res) {
   res.send(await servePage(req, res, req.params.name));
 });
